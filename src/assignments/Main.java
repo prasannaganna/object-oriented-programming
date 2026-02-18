@@ -1,6 +1,7 @@
 package assignments;
 
 import java.util.HashSet;
+import java.util.Iterator;
 
 public class Main {
     static void main(String[] args) {
@@ -17,8 +18,16 @@ public class Main {
                 "prod-110,Canon EOS 1500D Camera,41999.00,6.5"
         };
         ProductService productService = new ProductService();
-       // productService.getProducts(productsData);
-        HashSet<Product>productsSet =  productService.getProducts(Product)
-
+        // productService.getProducts(productsData);
+        HashSet<Product> productHashSet = productService.getProducts(productsData);
+        Iterator<Product> productIterator = productHashSet.iterator();
+        while (productIterator.hasNext()) {
+            System.out.println("----------------------------");
+            Product product = productIterator.next();
+            productService.displayProductDetails(product);
+        }
     }
 }
+
+
+
