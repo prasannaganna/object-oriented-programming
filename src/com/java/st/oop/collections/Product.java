@@ -3,7 +3,8 @@ package com.java.st.oop.collections;
 import java.util.HashSet;
 import java.util.Objects;
 
-public class Product {
+
+public class Product implements Comparable<Product>{
     private String id;
     private String name;
     private  float price;
@@ -60,6 +61,13 @@ public class Product {
                 ", name='" + name + '\'' +
                 ", price=" + price +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Product product) {
+        return this.getId().compareTo(product.getId());
+        //return  this.getName().compareTo(product.getName());
+       // return product.getId().compareTo(this.getId());
     }
 }
 

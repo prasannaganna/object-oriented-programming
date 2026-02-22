@@ -3,13 +3,13 @@ package assignments;
 import java.util.HashSet;
 import java.util.Objects;
 
-public class Oder {
+public class Order {
     private  String  id;
     private  String CustomerName;
     private HashSet<Product> productHashSet;
     private  String Status;
 
-    public Oder() {
+    public Order() {
     }
 
     public String getId() {
@@ -47,7 +47,7 @@ public class Oder {
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
-        Oder oder = (Oder) o;
+        Order oder = (Order) o;
         return Objects.equals(id, oder.id) && Objects.equals(CustomerName, oder.CustomerName) && Objects.equals(productHashSet, oder.productHashSet) && Objects.equals(Status, oder.Status);
     }
 
